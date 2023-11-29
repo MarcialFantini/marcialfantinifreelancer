@@ -12,19 +12,19 @@ import {
 const data = [
   {
     title: "Landing page",
-    srcImage: "images/header.jpg",
+    srcImage: "images/landing.webp",
     subTitle: "Pagina de presentación!",
     type: "landing",
   },
   {
     title: "Blog",
-    srcImage: "images/header.jpg",
+    srcImage: "images/blog.jpg",
     subTitle: "Postea tu contenido!",
     type: "blog",
   },
   {
     title: "Ecommerce",
-    srcImage: "images/header.jpg",
+    srcImage: "images/ecommerce.jpg",
     subTitle: "Vende tus productos!",
     type: "ecommerce",
   },
@@ -51,7 +51,7 @@ export function SectionService() {
         </div>
       </div>
 
-      <div className="flex sm:flex-row gap-[1rem] ">
+      <div className="flex flex-col lg:flex-row gap-[1rem]  ">
         {data.map((item) => {
           return (
             <Card
