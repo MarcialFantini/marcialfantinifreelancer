@@ -14,7 +14,7 @@ export function Header() {
           Freelance
         </h1>
         <p className="text-[1.8rem] my-10">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Listo para solucionar tus problemas!
         </p>
         <div className=" flex gap-[2rem] ">
           <Button className="text-[1.8rem] p-9 bg-orange-500">Háblame </Button>
