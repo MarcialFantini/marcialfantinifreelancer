@@ -1,4 +1,16 @@
+"use client";
 import { Button, Image } from "@nextui-org/react";
+const handlerToElement = (id: string) => () => {
+  const element = document.getElementById(id);
+
+  console.log(element);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 
 export function Header() {
   return (
@@ -22,12 +34,14 @@ export function Header() {
             color="warning"
             variant="shadow"
             className="text-[1.8rem] p-9 text-white"
+            onClick={handlerToElement("contact")}
           >
-            Háblame{" "}
+            Háblame
           </Button>
           <Button
             variant="ghost"
             className="text-[1.8rem] p-9 border-gray-500 border-solid border-2 "
+            onClick={handlerToElement("desarrollo")}
           >
             Trabajos
           </Button>

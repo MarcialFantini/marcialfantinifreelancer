@@ -1,6 +1,16 @@
 import { Button, Image } from "@nextui-org/react";
 import { Suspense } from "react";
+const handlerToElement = (id: string) => () => {
+  const element = document.getElementById(id);
 
+  console.log(element);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 export function SectionProjects() {
   return (
     <section
@@ -9,9 +19,7 @@ export function SectionProjects() {
     >
       <h2 className=" font-bold  text-[4rem] ">Projects</h2>
       <p className="my-[30px] text-[1.8rem]">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sint est
-        excepturi quis! Consequatur numquam, accusantium suscipit, illum sint
-        maiores quas rem molestiae sed, facilis quidem quo aliquid animi nemo!
+        Tengo muchos proyectos para que puedas ver mi estilo de trabajar!
       </p>
       <picture className=" relative flex align-center justify-center my-[3rem]">
         <Image
@@ -24,11 +32,13 @@ export function SectionProjects() {
         <div className=" top-0 left-0 bg-black/40 absolute w-full h-full z-30"></div>
         <div className=" absolute sm:bottom-2 left-0 w-full h-[40%] z-40 flex flex-col self-center justify-center pl-[5%] ">
           <div>
-            <h2 className="text-[1.4rem] m-0 font-bold">Cicu Marketing</h2>
-            <p className="text-[1.4rem] my-1 font-bold ">Technology</p>
-            <Button className=" bg-gradient-to-r from-purple-500 via-red-500 to-orange-500">
+            <h2 className="text-[1.4rem] text-white m-0 font-bold">Shadient</h2>
+            {/* <p className="text-[1.4rem] text-white my-1 font-bold ">
+              Technology
+            </p> */}
+            {/* <Button className=" bg-gradient-to-r from-purple-500 via-red-500 to-orange-500">
               Web Online
-            </Button>
+            </Button> */}
           </div>
         </div>
       </picture>
