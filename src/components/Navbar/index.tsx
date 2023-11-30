@@ -19,11 +19,16 @@ export const NavbarComponent = () => {
     const element = document.getElementById(id);
 
     console.log(element);
+
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
       });
     }
+
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 200);
   };
 
   return (
@@ -32,8 +37,7 @@ export const NavbarComponent = () => {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className=" p-[1.5rem]"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className={" p-[1.5rem] " + (theme !== "dark" ? " bg-gray-500/30" : "")}
     >
       <NavbarContent justify="start">
         <NavbarMenuToggle
@@ -76,13 +80,22 @@ export const NavbarComponent = () => {
       </NavbarContent>
 
       <NavbarMenu className=" py-5">
-        <p className=" text-xl"> Servicios</p>
+        <p className=" text-transparent">Servicios</p>
 
-        <p className=" text-xl"> Servicios</p>
+        <p onClick={handlerToElement("servicios")} className=" text-xl">
+          {" "}
+          Servicios
+        </p>
 
-        <p className=" text-xl">Proyectos </p>
-        <p className=" text-xl">Desarrollo</p>
-        <p className=" text-xl">Contacto</p>
+        <p onClick={handlerToElement("projects")} className=" text-xl">
+          Proyectos{" "}
+        </p>
+        <p onClick={handlerToElement("desarrollo")} className=" text-xl">
+          Desarrollo
+        </p>
+        <p onClick={handlerToElement("contact")} className=" text-xl">
+          Contacto
+        </p>
       </NavbarMenu>
     </Navbar>
   );
