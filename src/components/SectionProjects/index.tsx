@@ -1,4 +1,6 @@
+"use client";
 import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { Suspense } from "react";
 
 export function SectionProjects() {
   return (
@@ -27,15 +29,18 @@ export function SectionProjects() {
           </div>
         </div>
       </picture>
-      <div className="w-full h-[400px] relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg shadow-warning-500/40">
-        <video
-          className=" absolute w-full  "
-          src="/videos/production.webm"
-          autoPlay
-          loop
-          muted
-        ></video>
-      </div>
+
+      <Suspense fallback={<div></div>}>
+        <div className="w-full h-[400px] relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg shadow-warning-500/40">
+          <video
+            className=" absolute w-full  "
+            src="/videos/production.webm"
+            autoPlay
+            loop
+            muted
+          ></video>
+        </div>
+      </Suspense>
     </section>
   );
 }
