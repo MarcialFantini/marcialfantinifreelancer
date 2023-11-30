@@ -1,3 +1,4 @@
+import { Contact } from "@/components/Contacto/page";
 import { Header } from "@/components/Header";
 import { SectionGallery } from "@/components/SectionGallery";
 import { SectionProjects } from "@/components/SectionProjects";
@@ -10,6 +11,7 @@ export default function Home() {
       <SectionService></SectionService>
       <SectionProjects></SectionProjects>
       <SectionGallery></SectionGallery>
+      <Contact></Contact>
     </main>
   );
 }

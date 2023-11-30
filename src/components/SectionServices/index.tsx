@@ -1,32 +1,67 @@
-"use client";
-import {
-  Accordion,
-  AccordionItem,
-  Button,
-  Card,
-  CardFooter,
-  CardHeader,
-  Image,
-} from "@nextui-org/react";
+import { Accordion, AccordionItem, Button } from "@nextui-org/react";
+import { CardComponent } from "../ServiceCard";
+import { Acordion } from "../Acordion";
 
 const data = [
   {
     title: "Landing page",
-    srcImage: "images/landing.webp",
+    srcImage: "/images/landing.webp",
     subTitle: "Pagina de presentación!",
     type: "landing",
+    texts: [
+      {
+        title: "Conversión Efectiva:",
+        text: "Diseñamos landing pages centradas en la conversión, maximizando la probabilidad de convertir visitantes en clientes.",
+      },
+      {
+        title: "Diseño Atractivo:",
+        text: "Nuestras landing pages no solo son funcionales, sino también visualmente atractivas, generando una primera impresión positiva.",
+      },
+      {
+        title: "Optimización para Móviles:",
+        text: "Garantizamos que la landing page sea completamente responsive, brindando una experiencia óptima tanto en dispositivos móviles como en computadoras de escritorio.",
+      },
+    ],
   },
   {
     title: "Blog",
-    srcImage: "images/blog.jpg",
+    srcImage: "/images/blog.jpg",
     subTitle: "Postea tu contenido!",
     type: "blog",
+    texts: [
+      {
+        title: "Contenido Relevante y Valioso:",
+        text: "Ofrecemos blogs con contenido que responde a las necesidades y preguntas de tu audiencia, posicionándote como una autoridad en tu industria.",
+      },
+      {
+        title: "Diseño Agradable:",
+        text: "Creamos blogs con diseños intuitivos y atractivos que facilitan la navegación y la lectura, mejorando la experiencia del usuario.",
+      },
+      {
+        title: "Integración con Redes Sociales:",
+        text: " Facilitamos la compartición del contenido en redes sociales, amplificando su alcance y aumentando la interacción.",
+      },
+    ],
   },
   {
     title: "Ecommerce",
-    srcImage: "images/ecommerce.jpg",
+    srcImage: "/images/ecommerce.jpg",
     subTitle: "Vende tus productos!",
     type: "ecommerce",
+    texts: [
+      {
+        title: "Experiencia de Compra Simplificada: ",
+        text: "Diseñamos tiendas online con procesos de compra intuitivos y fluidos, minimizando los obstáculos para convertir visitantes en clientes.",
+      },
+      {
+        title: "Seguridad de Pago:",
+        text: "Implementamos medidas de seguridad robustas para garantizar transacciones seguras y proteger la información del cliente.",
+      },
+      {
+        title: "Gestión de Inventarios Eficiente: ",
+        text: "Integración de sistemas que facilitan la gestión de inventarios, evitando problemas de stock y mejorando la eficiencia operativa.",
+      },
+    ],
   },
 ];
 
@@ -37,105 +72,43 @@ export function SectionService() {
       className="w-full max-w-[95%] mx-auto my-[40px] font-bold flex flex-col gap-[3rem]"
     >
       <div>
-        <h2 className="text-[4rem] font-bold  ">Desarrollo de soluciones </h2>
-        <h2 className="text-[4rem] font-bold "> Optimizaciones de sistemas</h2>
-        <div className="grid sm:grid-cols-2 items-center justify-between">
-          <h2 className=" text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-r  from-red-500 to-orange-500">
+        <h2 className="text-[2rem]  sm:text-[4rem] font-bold  ">
+          Desarrollo de soluciones{" "}
+        </h2>
+        <h2 className="text-[2rem] my-5  sm:text-[4rem] font-bold ">
+          {" "}
+          Optimizaciones de sistemas
+        </h2>
+        <div className="grid sm:grid-cols-2 items-center justify-between gap-10">
+          <h2 className=" text-[2rem] sm:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-r  from-red-500 to-orange-500">
             Resolviendo con Código
           </h2>
-          <div className=" ml-auto flex flex-row gap-[1.5rem]">
+          <div className=" ml-auto flex flex-row gap-[1.5rem] items-center justify-center ">
             <Button
               variant="shadow"
               color="warning"
-              className="text-[1.8rem] p-9 text-white "
+              className="text-[1.4rem]  text-white "
             >
               Háblame!
             </Button>
-            <Button variant="ghost" className=" text-[1.8rem] p-9">
+            <Button variant="ghost" className=" text-[1.4rem] ">
               Trabajos!
             </Button>
           </div>
         </div>
       </div>
-
       <div className="flex flex-col lg:flex-row gap-[2rem]  ">
         {data.map((item, index) => {
           return (
-            <Card
+            <CardComponent
               key={index}
-              isFooterBlurred
-              className="w-full h-[300px] col-span-12 sm:col-span-5  shadow-lg shadow-warning/40  "
-            >
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-[1.8rem] text-white/70 uppercase font-bold">
-                  Web
-                </p>
-                <h4 className="text-white font-bold text-[3rem]">
-                  {item.title}
-                </h4>
-              </CardHeader>
-
-              <Image
-                removeWrapper
-                alt="Card example background"
-                className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-                src={item.srcImage}
-              />
-              <div className=" absolute w-full h-full top-0 left-0 bg-black/70"></div>
-              <CardFooter className="absolute bg-black/5 backdrop:blur-sm bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between min-h-[30%]">
-                <div>
-                  <p className="text-white  text-[2rem]  ">{item.subTitle}</p>
-                </div>
-                <Button
-                  className="text-[1.6rem] p-[2rem]"
-                  color="primary"
-                  radius="full"
-                  variant="shadow"
-                >
-                  Información
-                </Button>
-              </CardFooter>
-            </Card>
+              index={index}
+              item={item}
+            ></CardComponent>
           );
         })}
       </div>
-
-      <Accordion
-        className="mt-[40px]"
-        variant="bordered"
-        itemClasses={{
-          title: "text-[2.4rem] ",
-        }}
-      >
-        <AccordionItem
-          className="text-[1.6rem] "
-          key="1"
-          aria-label="Accordion 1"
-          title="Landing Page"
-        >
-          Una landing page es un sitio web de presentación, diseñada para
-          convencer a tus futuros clientes de tus servicios o productos y
-          posicionar tu Marca.
-        </AccordionItem>
-        <AccordionItem
-          className="text-[1.6rem]"
-          key="2"
-          aria-label="Accordion 2"
-          title="Blogs"
-        >
-          Posicionamiento de marca con marketing de contenido, permite conseguir
-          una audiencia para que luego consuman tus productos/servicios.
-        </AccordionItem>
-        <AccordionItem
-          className="text-[1.6rem]"
-          key="3"
-          aria-label="Accordion 3"
-          title="Ecommerce"
-        >
-          Efectúa ventas online, funciona 24/7, reduce los costos operativos al
-          no tener una tienda física, facilita la gestión de inventario.
-        </AccordionItem>
-      </Accordion>
+      <Acordion></Acordion>
     </section>
   );
 }

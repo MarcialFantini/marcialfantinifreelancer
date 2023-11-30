@@ -3,7 +3,7 @@ import { TextGallery } from "../TextGallery";
 
 export function SectionGallery() {
   return (
-    <section id="desarrollo" className="w-[95%] mx-auto my-[4rem]">
+    <section id="desarrollo" className="w-[95%] mx-auto mt-[4rem]">
       <TextGallery></TextGallery>
       <Gallery></Gallery>
     </section>

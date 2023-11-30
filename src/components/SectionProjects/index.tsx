@@ -1,4 +1,3 @@
-"use client";
 import { Button, Image } from "@nextui-org/react";
 import { Suspense } from "react";
 
@@ -22,12 +21,12 @@ export function SectionProjects() {
           alt="project one"
           src={"/images/mainPanel.png"}
         ></Image>
-        <div className=" top-0 left-0 bg-black/20 absolute w-full h-full z-30"></div>
-        <div className=" absolute bottom-0 left-0 w-[30%] h-[40%]  z-40 flex flex-col justify-center pl-[5%] ">
+        <div className=" top-0 left-0 bg-black/40 absolute w-full h-full z-30"></div>
+        <div className=" absolute sm:bottom-2 left-0 w-full h-[40%] z-40 flex flex-col self-center justify-center pl-[5%] ">
           <div>
-            <h2 className="text-[4rem] font-bold">Cicu Marketing</h2>
-            <p className="text-[2rem] font-bold my-[2rem]">Technology</p>
-            <Button className="text-[2rem] px-6 py-8 bg-gradient-to-r from-purple-500 via-red-500 to-orange-500">
+            <h2 className="text-[1.4rem] m-0 font-bold">Cicu Marketing</h2>
+            <p className="text-[1.4rem] my-1 font-bold ">Technology</p>
+            <Button className=" bg-gradient-to-r from-purple-500 via-red-500 to-orange-500">
               Web Online
             </Button>
           </div>
@@ -35,9 +34,9 @@ export function SectionProjects() {
       </picture>
 
       <Suspense fallback={<div></div>}>
-        <div className="w-full h-[400px] relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg shadow-warning-500/40">
+        <div className="lg:h-[400px] relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg shadow-warning-500/40">
           <video
-            className=" absolute w-full  "
+            className=" lg:absolute lg:w-full lg:h-auto"
             src="/videos/production.webm"
             autoPlay
             loop

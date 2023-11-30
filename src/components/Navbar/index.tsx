@@ -33,11 +33,11 @@ export const NavbarComponent = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className=" p-[1.5rem]"
-      onClick={() => setTheme("dark")}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <NavbarContent justify="start">
         <NavbarMenuToggle
-          className=" sm:hidden"
+          className=" lg:hidden"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
         <NavbarBrand
@@ -48,46 +48,41 @@ export const NavbarComponent = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 flex-row items-center justify-center">
+      <NavbarContent className="hidden lg:flex gap-4 flex-row items-center justify-center">
         <NavbarItem
-          onClick={handlerToElement("header")}
-          className=" text-[2rem]  hover:text-white text-center cursor-pointer"
+          onClick={handlerToElement("servicios")}
+          className=" text-[2rem]  text-center cursor-pointer"
         >
-          <Link color="foreground" href="#">
-            Features
-          </Link>
+          <p> Servicios</p>
         </NavbarItem>
-        <NavbarItem className=" text-[2rem] text-center  hover:text-white ">
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
+        <NavbarItem
+          onClick={handlerToElement("projects")}
+          className=" text-[2rem] text-center  hover:text-white "
+        >
+          <p aria-current="page">Proyectos </p>
         </NavbarItem>
-        <NavbarItem className=" text-[2rem] text-center  hover:text-white">
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
+        <NavbarItem
+          onClick={handlerToElement("desarrollo")}
+          className=" text-[2rem] text-center  hover:text-white"
+        >
+          <p color="foreground">Desarrollo</p>
+        </NavbarItem>{" "}
+        <NavbarItem
+          onClick={handlerToElement("contact")}
+          className=" text-[2rem] text-center  hover:text-white"
+        >
+          <p color="foreground">Contacto</p>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>{" "}
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>{" "}
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>{" "}
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>{" "}
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>{" "}
-        <NavbarItem>
-          <Link href="#"> Data</Link>
-        </NavbarItem>
+      <NavbarMenu className=" py-5">
+        <p className=" text-xl"> Servicios</p>
+
+        <p className=" text-xl"> Servicios</p>
+
+        <p className=" text-xl">Proyectos </p>
+        <p className=" text-xl">Desarrollo</p>
+        <p className=" text-xl">Contacto</p>
       </NavbarMenu>
     </Navbar>
   );
