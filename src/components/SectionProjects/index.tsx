@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { Suspense } from "react";
 
 export function SectionProjects() {
@@ -17,8 +17,9 @@ export function SectionProjects() {
           isZoomed
           className=" rounded-none aspect-[2] "
           alt="project one"
-          src={"/images/header.jpg"}
+          src={"/images/mainPanel.png"}
         ></Image>
+        <div className=" top-0 left-0 bg-black/20 absolute w-full h-full z-30"></div>
         <div className=" absolute bottom-0 left-0 w-[30%] h-[40%]  z-40 flex flex-col justify-center pl-[5%] ">
           <div>
             <h2 className="text-[4rem] font-bold">Cicu Marketing</h2>
