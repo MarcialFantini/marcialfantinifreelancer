@@ -32,7 +32,10 @@ const data = [
 
 export function SectionService() {
   return (
-    <section className="w-full max-w-[95%] mx-auto my-[40px] font-bold flex flex-col gap-[3rem]">
+    <section
+      id="servicios"
+      className="w-full max-w-[95%] mx-auto my-[40px] font-bold flex flex-col gap-[3rem]"
+    >
       <div>
         <h2 className="text-[4rem] font-bold  ">Desarrollo de soluciones </h2>
         <h2 className="text-[4rem] font-bold "> Optimizaciones de sistemas</h2>
@@ -56,9 +59,10 @@ export function SectionService() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-[2rem]  ">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
             <Card
+              key={index}
               isFooterBlurred
               className="w-full h-[300px] col-span-12 sm:col-span-5  shadow-lg shadow-warning/40  "
             >

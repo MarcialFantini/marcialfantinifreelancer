@@ -4,7 +4,10 @@ import { Suspense } from "react";
 
 export function SectionProjects() {
   return (
-    <section className=" w-[95%]  m-auto p-0 flex flex-col  justify-center">
+    <section
+      id="projects"
+      className=" w-[95%]  m-auto p-0 flex flex-col  justify-center"
+    >
       <h2 className=" font-bold  text-[4rem] ">Projects</h2>
       <p className="my-[30px] text-[1.8rem]">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sint est
