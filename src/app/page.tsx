@@ -5,7 +5,7 @@ import { SectionService } from "@/components/SectionServices";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col max-w-[1300px] m-auto ">
       <Header></Header>
       <SectionService></SectionService>
       <SectionProjects></SectionProjects>

@@ -27,15 +27,15 @@ export function SectionProjects() {
           </div>
         </div>
       </picture>
-      <picture className=" my-[3rem] relative flex align-center justify-center">
-        <Image
-          isBlurred
-          isZoomed
-          className=" rounded-none aspect-[2] "
-          alt="project one"
-          src={"/images/header.jpg"}
-        ></Image>
-      </picture>
+      <div className="w-full h-[400px] relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg shadow-warning-500/40">
+        <video
+          className=" absolute w-full  "
+          src="/videos/production.webm"
+          autoPlay
+          loop
+          muted
+        ></video>
+      </div>
     </section>
   );
 }
