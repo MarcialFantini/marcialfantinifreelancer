@@ -69,8 +69,8 @@ export const CardComponent = ({
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
-                Modal Title
+              <ModalHeader className="flex flex-col gap-1 font-bold text-[2rem]">
+                {item.title}
               </ModalHeader>
               <ModalBody>
                 {item.texts.map((item, key) => {
@@ -86,7 +86,7 @@ export const CardComponent = ({
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" onPress={onClose}>
-                  Action
+                  Atrás
                 </Button>
               </ModalFooter>
             </>

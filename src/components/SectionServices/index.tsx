@@ -101,14 +101,14 @@ export function SectionService() {
               color="warning"
               className="text-[1.8rem] p-9 text-white "
             >
-              Háblame!
+              Háblame
             </Button>
             <Button
               onClick={handlerToElement("desarrollo")}
               variant="ghost"
               className=" text-[1.8rem] p-9 "
             >
-              Trabajos!
+              Trabajos
             </Button>
           </div>
         </div>

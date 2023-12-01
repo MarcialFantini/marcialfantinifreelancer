@@ -21,14 +21,12 @@ export function Header() {
       <div className=" h-full flex flex-col justify-center">
         <h1 className="text-[3rem] font-bold md:text-[5rem] m-0 flex flex-col">
           <span>
-            Hola
-            <span className=" text-warning-500 pl-[2rem]">soy Marcial!</span>
+            Hola,
+            <span className=" text-warning-500 pl-[2rem]">soy Marcial</span>
           </span>
           Freelancer
         </h1>
-        <p className="text-[2rem] my-10">
-          Listo para solucionar tus problemas!
-        </p>
+        <p className="text-[2rem] my-10">Listo para solucionar tus problemas</p>
         <div className=" flex gap-[2rem] ">
           <Button
             color="warning"
