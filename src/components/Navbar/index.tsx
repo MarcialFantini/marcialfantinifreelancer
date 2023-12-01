@@ -55,25 +55,25 @@ export const NavbarComponent = () => {
       <NavbarContent className="hidden lg:flex gap-4 flex-row items-center justify-center">
         <NavbarItem
           onClick={handlerToElement("servicios")}
-          className=" text-[2rem]  text-center cursor-pointer"
+          className=" text-[2rem] cur  text-center cursor-pointer  hover:text-white"
         >
           <p> Servicios</p>
         </NavbarItem>
         <NavbarItem
           onClick={handlerToElement("projects")}
-          className=" text-[2rem] text-center  hover:text-white "
+          className=" text-[2rem] text-center cursor-pointer  hover:text-white "
         >
           <p aria-current="page">Proyectos </p>
         </NavbarItem>
         <NavbarItem
           onClick={handlerToElement("desarrollo")}
-          className=" text-[2rem] text-center  hover:text-white"
+          className=" text-[2rem] text-center  cursor-pointer hover:text-white"
         >
           <p color="foreground">Desarrollo</p>
         </NavbarItem>{" "}
         <NavbarItem
           onClick={handlerToElement("contact")}
-          className=" text-[2rem] text-center  hover:text-white"
+          className=" text-[2rem] text-center  cursor-pointer hover:text-white"
         >
           <p color="foreground">Contacto</p>
         </NavbarItem>

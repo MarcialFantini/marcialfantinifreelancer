@@ -1,7 +1,18 @@
-import { Accordion, AccordionItem, Button } from "@nextui-org/react";
+"use client";
+import { Button } from "@nextui-org/react";
 import { CardComponent } from "../ServiceCard";
 import { Acordion } from "../Acordion";
+const handlerToElement = (id: string) => () => {
+  const element = document.getElementById(id);
 
+  console.log(element);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 const data = [
   {
     title: "Landing page",
@@ -85,13 +96,18 @@ export function SectionService() {
           </h2>
           <div className=" ml-auto flex flex-row gap-[1.5rem] items-center justify-center ">
             <Button
+              onClick={handlerToElement("contact")}
               variant="shadow"
               color="warning"
-              className="text-[1.4rem]  text-white "
+              className="text-[1.8rem] p-9 text-white "
             >
               Háblame!
             </Button>
-            <Button variant="ghost" className=" text-[1.4rem] ">
+            <Button
+              onClick={handlerToElement("desarrollo")}
+              variant="ghost"
+              className=" text-[1.8rem] p-9 "
+            >
               Trabajos!
             </Button>
           </div>
