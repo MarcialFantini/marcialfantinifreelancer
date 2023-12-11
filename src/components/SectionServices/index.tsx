@@ -94,19 +94,19 @@ export function SectionService() {
           <h2 className=" text-[2rem] sm:text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-r  from-red-500 to-orange-500">
             Resolviendo con Código
           </h2>
-          <div className=" ml-auto flex flex-row gap-[1.5rem] items-center justify-center ">
+          <div className="w-full ml-auto flex flex-col sm:flex-row gap-[1.5rem] sm:items-center justify-center ">
             <Button
               onClick={handlerToElement("contact")}
               variant="shadow"
               color="warning"
-              className="text-[1.8rem] p-9 text-white "
+              className="text-[1.2rem] p-9 text-white "
             >
               Háblame
             </Button>
             <Button
               onClick={handlerToElement("desarrollo")}
               variant="ghost"
-              className=" text-[1.8rem] p-9 "
+              className=" text-[1.2rem] p-9 "
             >
               Trabajos
             </Button>

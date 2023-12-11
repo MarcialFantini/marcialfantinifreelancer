@@ -27,7 +27,7 @@ export function Header() {
           Freelancer
         </h1>
         <p className="text-[2rem] my-10">Listo para solucionar tus problemas</p>
-        <div className=" flex gap-[2rem] ">
+        <div className=" flex flex-col sm:flex-row gap-[2rem] ">
           <Button
             color="warning"
             variant="shadow"
@@ -46,7 +46,12 @@ export function Header() {
         </div>
       </div>
       <picture className="flex items-center justify-center">
-        <Image isZoomed isBlurred src={"/images/header.jpg"} alt="hola"></Image>
+        <Image
+          isZoomed
+          isBlurred
+          src={"/images/header.webp"}
+          alt="hola"
+        ></Image>
       </picture>
     </header>
   );
